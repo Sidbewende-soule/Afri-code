@@ -30,7 +30,11 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": [
+                "da8b08f55c082e3a-154-66-162-115.serveousercontent.com",
+                ".serveousercontent.com",
+                ".serveo.net"
+              ]
             },
             "ssr": {
               "entry": "src/server.ts"
@@ -62,6 +66,13 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": [
+              "da8b08f55c082e3a-154-66-162-115.serveousercontent.com",
+              ".serveousercontent.com",
+              ".serveo.net"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "Afri-code:build:production"

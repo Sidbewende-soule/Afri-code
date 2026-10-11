@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+/* Ligne orange sous le lien actif */
+.active-nav-link {
+  color: #FF8200 !important;
+  font-weight: 600;
+}
+
+.active-nav-link .nav-active-bar {
+  display: block !important;
+}

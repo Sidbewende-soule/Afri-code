@@ -1,3 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
-
+/* Afri-code Global Styles & Design System */
+/* Codes couleurs extraits directement de public/logo-africode.png */
 @import 'tailwindcss';
+
+@theme {
+  /* Couleurs Principales Afri-code : Blanc, Ivoire & Orange Vif */
+  --color-afri-white: #FFFFFF;
+  --color-afri-ivory: #FFF9F0;
+  --color-afri-orange: #FF8200;
+  --color-afri-orange-light: #FFB45B;
+  --color-afri-orange-hover: #E67500;
+  --color-afri-anthracite: #292F36;
+  --color-afri-text-muted: #555B63;
+
+  --color-afri-yellow: #FAAB03;
+  --color-afri-yellow-light: #FFBC2E;
+  --color-afri-yellow-hover: #E59B02;
+  --color-afri-yellow-dark: #BF8201;
+  --color-afri-yellow-subtle: #FFF8E7;
+
+  /* Alias Doré (Gold) pour rétrocompatibilité */
+  --color-afri-gold: #FAAB03;
+  --color-afri-gold-hover: #E59B02;
+  --color-afri-gold-dark: #BF8201;
+  --color-afri-gold-light: #FFBC2E;
+  --color-afri-gold-subtle: #FFF8E7;
+
+  /* Couleurs Secondaires de Contraste & Structure (Bleu Nuit) */
+  --color-afri-blue: #001D51;
+  --color-afri-blue-dark: #001133;
+  --color-afri-blue-light: #002B7A;
+  --color-afri-blue-subtle: #0D3C9B;
+
+  /* Neutres Sable */
+  --color-afri-sand: #F1E3CC;
+  --color-afri-sand-dark: #D9C4A3;
+  --color-afri-sand-light: #FAF6F0;
+
+  /* Typographies */
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-tech: 'Space Grotesk', monospace;
+}
+
+/* Styles de base et lissage */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: #292F36;
+  background-color: #FFF9F0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilitaires visuels Afri-code */
+.bg-afri-gradient {
+  background: linear-gradient(135deg, #001133 0%, #001D51 60%, #002B7A 100%);
+}
+
+.text-gradient-yellow,
+.text-gradient-gold {
+  background: linear-gradient(90deg, #FAAB03 0%, #FFC857 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-yellow,
+.glow-gold {
+  box-shadow: 0 0 25px rgba(250, 171, 3, 0.3);
+}
+
