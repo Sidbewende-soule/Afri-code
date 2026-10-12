@@ -89,7 +89,7 @@
     if(!reduce&&p>=.58&&burstCyc!==cyc){burstCyc=cyc;var c=scr({x:600,y:660});emit(c.x,c.y,60,7)}
     var q=cl((p-.58)/.32);ring.setAttribute("r",60+q*560);ring.setAttribute("opacity",q>0&&q<1?(1-q)*.9:0);ring.setAttribute("stroke-width",2+(1-q)*14);
     main.setAttribute("stroke-width",47+pulse*7);glow.setAttribute("opacity",.45+pulse*.55);
-    pct+=loaded?(100-pct)*.12:(92-pct)*.01; if(loaded&&pct>99.4)pct=100;
+    pct+=loaded?(100-pct)*.09:(96-pct)*.02; if(loaded&&pct>99.4)pct=100;
     pctEl.textContent=("00"+Math.floor(pct)).slice(-3);
     if(loaded&&pct===100&&!exitT){exitT=now;var c2=scr({x:600,y:660});emit(c2.x,c2.y,120,11)}
     cx.clearRect(0,0,W,H);cx.textAlign="center";cx.textBaseline="middle";
@@ -102,8 +102,13 @@
       if(x>=1){if(demo){if(now-exitT>2200)reset(now)}else{R.remove();return}}}
     requestAnimationFrame(frame)}
   requestAnimationFrame(frame);
-  function done(){setTimeout(function(){loaded=true},600)}
-  window.africodeLoader={finish:function(){loaded=true}};
+  var MIN_TIME=2800;
+  function done(){
+    var elapsed=performance.now()-start;
+    var wait=Math.max(0,MIN_TIME-elapsed);
+    setTimeout(function(){loaded=true},wait);
+  }
+  window.africodeLoader={finish:function(){done()}};
   if(!demo){if(document.readyState==="complete")done();else addEventListener("load",done)}
 })();
 </script>

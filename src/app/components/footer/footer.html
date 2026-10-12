@@ -1,12 +1,13 @@
-<footer class="relative overflow-hidden bg-[#140B04] text-[#F0E2CB] pt-16 sm:pt-20 pb-8" aria-label="Pied de page Afri-code">
+<footer class="relative overflow-hidden bg-white text-[#292F36] pt-16 sm:pt-20 pb-8 border-t border-[#EDE4D8]"
+  aria-label="Pied de page Afri-code">
 
-  <!-- Motif chevrons : coin haut droit (fidèle à footer.png) -->
+  <!-- Motif chevrons : coin haut droit (subtil sur fond blanc) -->
   <img src="footer-chevron-tr.png" alt=""
-    class="pointer-events-none absolute top-0 right-0 w-36 sm:w-52 lg:w-72 select-none z-0" aria-hidden="true" />
+    class="pointer-events-none absolute top-0 right-0 w-36 sm:w-52 lg:w-72 select-none z-0 opacity-25" aria-hidden="true" />
 
-  <!-- Motif chevrons : coin bas gauche (fidèle à footer.png) -->
+  <!-- Motif chevrons : coin bas gauche (subtil sur fond blanc) -->
   <img src="footer-chevron-bl.png" alt=""
-    class="pointer-events-none absolute bottom-0 left-0 w-24 sm:w-36 lg:w-44 select-none z-0" aria-hidden="true" />
+    class="pointer-events-none absolute bottom-0 left-0 w-24 sm:w-36 lg:w-44 select-none z-0 opacity-25" aria-hidden="true" />
 
   <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
@@ -15,29 +16,34 @@
 
       <!-- COLONNE 1 : Logo & Contact -->
       <div class="flex flex-col justify-start">
-        <a routerLink="/" class="inline-block" aria-label="Afri-code, accueil">
-          <img src="logo-footer.png" alt="Afri-code Logo" class="h-20 sm:h-24 w-auto object-contain -ml-2" />
+        <a routerLink="/" class="inline-flex items-center gap-3 group" aria-label="Afri-code, accueil">
+          <img src="Afri-Code_LOGO.png" alt="Afri-code Logo" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+          <span class="text-2xl sm:text-[26px] font-extrabold tracking-tight font-['Plus_Jakarta_Sans']">
+            <span class="text-[#292F36]">Afri-</span><span class="text-[#FF8200]">code</span>
+          </span>
         </a>
 
-        <p class="mt-4 max-w-sm text-[15px] leading-relaxed text-[#F0E2CB]/90 font-['Inter']">
+        <p class="mt-4 max-w-sm text-[15px] leading-relaxed text-[#555B63] font-['Inter']">
           Nous façonnons des solutions numériques utiles, inclusives et ancrées dans les réalités africaines.
         </p>
 
         <ul class="mt-6 space-y-3.5 text-[15px] font-['Inter']">
           <li>
             <a href="mailto:souledominique257@gmail.com"
-              class="inline-flex items-center gap-3 text-[#F0E2CB] hover:text-[#F18F08] transition-colors group">
-              <svg class="h-5 w-5 text-[#F18F08] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v.3l-10 6.2L2 6.8v-.3zM2 9.1l9.5 5.9a1 1 0 0 0 1 0L22 9.1v8.4a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 17.5V9.1z" />
+              class="inline-flex items-center gap-3 text-[#292F36] hover:text-[#FF8200] transition-colors group">
+              <svg class="h-5 w-5 text-[#FF8200] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v.3l-10 6.2L2 6.8v-.3zM2 9.1l9.5 5.9a1 1 0 0 0 1 0L22 9.1v8.4a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 17.5V9.1z" />
               </svg>
               <span class="group-hover:underline">souledominique257&#64;gmail.com</span>
             </a>
           </li>
           <li>
             <a href="tel:+22664548355"
-              class="inline-flex items-center gap-3 text-[#F0E2CB] hover:text-[#F18F08] transition-colors group">
-              <svg class="h-5 w-5 text-[#F18F08] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1L6.6 10.8z" />
+              class="inline-flex items-center gap-3 text-[#292F36] hover:text-[#FF8200] transition-colors group">
+              <svg class="h-5 w-5 text-[#FF8200] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1L6.6 10.8z" />
               </svg>
               <span class="group-hover:underline">+226 64 54 83 55</span>
             </a>
@@ -47,58 +53,74 @@
 
       <!-- COLONNE 2 : Navigation -->
       <div>
-        <h3 class="text-xl font-bold text-[#F18F08] font-['Plus_Jakarta_Sans']">Navigation</h3>
-        <div class="mt-2.5 mb-5 h-[3px] w-9 bg-[#F18F08] rounded-full"></div>
+        <h3 class="text-xl font-bold text-[#292F36] font-['Plus_Jakarta_Sans']">Navigation</h3>
+        <div class="mt-2.5 mb-5 h-[3px] w-9 bg-[#FF8200] rounded-full"></div>
 
         <ul class="space-y-3 text-[15px] font-['Inter']">
-          <li><a routerLink="/" class="text-[#F0E2CB]/90 hover:text-[#F18F08] hover:translate-x-1 inline-block transition-all">Accueil</a></li>
-          <li><a routerLink="/a-propos" class="text-[#F0E2CB]/90 hover:text-[#F18F08] hover:translate-x-1 inline-block transition-all">À propos</a></li>
-          <li><a routerLink="/services" class="text-[#F0E2CB]/90 hover:text-[#F18F08] hover:translate-x-1 inline-block transition-all">Nos services</a></li>
-          <li><a routerLink="/" fragment="pourquoi-nous-choisir" class="text-[#F0E2CB]/90 hover:text-[#F18F08] hover:translate-x-1 inline-block transition-all">Pourquoi nous choisir ?</a></li>
-          <li><a routerLink="/realisations" class="text-[#F0E2CB]/90 hover:text-[#F18F08] hover:translate-x-1 inline-block transition-all">Réalisations</a></li>
-          <li><a routerLink="/contact" class="text-[#F0E2CB]/90 hover:text-[#F18F08] hover:translate-x-1 inline-block transition-all">Contact</a></li>
+          <li><a routerLink="/"
+              class="text-[#555B63] hover:text-[#FF8200] hover:translate-x-1 inline-block transition-all">Accueil</a>
+          </li>
+          <li><a routerLink="/a-propos"
+              class="text-[#555B63] hover:text-[#FF8200] hover:translate-x-1 inline-block transition-all">À
+              propos</a></li>
+          <li><a routerLink="/services"
+              class="text-[#555B63] hover:text-[#FF8200] hover:translate-x-1 inline-block transition-all">Nos
+              services</a></li>
+          <li><a routerLink="/" fragment="pourquoi-nous-choisir"
+              class="text-[#555B63] hover:text-[#FF8200] hover:translate-x-1 inline-block transition-all">Pourquoi
+              nous choisir ?</a></li>
+          <li><a routerLink="/realisations"
+              class="text-[#555B63] hover:text-[#FF8200] hover:translate-x-1 inline-block transition-all">Réalisations</a>
+          </li>
+          <li><a routerLink="/contact"
+              class="text-[#555B63] hover:text-[#FF8200] hover:translate-x-1 inline-block transition-all">Contact</a>
+          </li>
         </ul>
       </div>
 
       <!-- COLONNE 3 : Nos services -->
       <div>
-        <h3 class="text-xl font-bold text-[#F18F08] font-['Plus_Jakarta_Sans']">Nos services</h3>
-        <div class="mt-2.5 mb-5 h-[3px] w-9 bg-[#F18F08] rounded-full"></div>
+        <h3 class="text-xl font-bold text-[#292F36] font-['Plus_Jakarta_Sans']">Nos services</h3>
+        <div class="mt-2.5 mb-5 h-[3px] w-9 bg-[#FF8200] rounded-full"></div>
 
         <ul class="space-y-5 font-['Inter']">
-          <li class="flex items-start gap-4 group">
-            <svg class="mt-0.5 h-6 w-6 text-[#F18F08] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          <li class="flex items-start gap-4 group cursor-pointer">
+            <svg class="mt-0.5 h-6 w-6 text-[#FF8200] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="3" width="20" height="14" rx="2" />
               <path d="M8 21h8M12 17v4" />
             </svg>
             <div>
-              <p class="text-[15px] font-semibold text-[#F0E2CB] group-hover:text-[#F18F08] transition-colors">Développement web</p>
-              <p class="text-xs sm:text-[13px] text-[#F0E2CB]/75 mt-0.5">Sites web modernes et performants</p>
+              <p class="text-[15px] font-semibold text-[#292F36] group-hover:text-[#FF8200] transition-colors">
+                Développement web</p>
+              <p class="text-xs sm:text-[13px] text-[#6A717B] mt-0.5">Sites web modernes et performants</p>
             </div>
           </li>
 
-          <li class="flex items-start gap-4 group">
-            <svg class="mt-0.5 h-6 w-6 text-[#F18F08] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          <li class="flex items-start gap-4 group cursor-pointer">
+            <svg class="mt-0.5 h-6 w-6 text-[#FF8200] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="6" y="2" width="12" height="20" rx="2" />
               <circle cx="12" cy="18" r="0.8" fill="currentColor" />
             </svg>
             <div>
-              <p class="text-[15px] font-semibold text-[#F0E2CB] group-hover:text-[#F18F08] transition-colors">Applications mobiles</p>
-              <p class="text-xs sm:text-[13px] text-[#F0E2CB]/75 mt-0.5">Des apps pensées pour vos utilisateurs</p>
+              <p class="text-[15px] font-semibold text-[#292F36] group-hover:text-[#FF8200] transition-colors">
+                Applications mobiles</p>
+              <p class="text-xs sm:text-[13px] text-[#6A717B] mt-0.5">Des apps pensées pour vos utilisateurs</p>
             </div>
           </li>
 
-          <li class="flex items-start gap-4 group">
-            <svg class="mt-0.5 h-6 w-6 text-[#F18F08] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          <li class="flex items-start gap-4 group cursor-pointer">
+            <svg class="mt-0.5 h-6 w-6 text-[#FF8200] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="3" />
-              <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+              <path
+                d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
             </svg>
             <div>
-              <p class="text-[15px] font-semibold text-[#F0E2CB] group-hover:text-[#F18F08] transition-colors">Solutions sur mesure</p>
-              <p class="text-xs sm:text-[13px] text-[#F0E2CB]/75 mt-0.5">Des outils digitaux adaptés à vos besoins</p>
+              <p class="text-[15px] font-semibold text-[#292F36] group-hover:text-[#FF8200] transition-colors">Solutions
+                sur mesure</p>
+              <p class="text-xs sm:text-[13px] text-[#6A717B] mt-0.5">Des outils digitaux adaptés à vos besoins</p>
             </div>
           </li>
         </ul>
@@ -106,39 +128,43 @@
 
       <!-- COLONNE 4 : Restons connectés -->
       <div>
-        <h3 class="text-xl font-bold text-[#F18F08] font-['Plus_Jakarta_Sans']">Restons connectés</h3>
-        <div class="mt-2.5 mb-5 h-[3px] w-9 bg-[#F18F08] rounded-full"></div>
+        <h3 class="text-xl font-bold text-[#292F36] font-['Plus_Jakarta_Sans']">Restons connectés</h3>
+        <div class="mt-2.5 mb-5 h-[3px] w-9 bg-[#FF8200] rounded-full"></div>
 
-        <p class="text-[15px] leading-relaxed text-[#F0E2CB]/90 font-['Inter']">
+        <p class="text-[15px] leading-relaxed text-[#555B63] font-['Inter']">
           Suivez notre actualité et nos projets sur les réseaux sociaux.
         </p>
 
         <!-- Pastilles réseaux sociaux avec cercles fins orange -->
         <div class="mt-6 flex flex-wrap items-center gap-3" aria-label="Réseaux sociaux">
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#F18F08] text-[#F18F08] transition-all hover:bg-[#F18F08] hover:text-[#140B04] hover:scale-105">
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF8200] text-[#FF8200] bg-[#FFF8EE] transition-all hover:bg-[#FF8200] hover:text-white hover:scale-105">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.63 4.74 6.05v5.9h-4v-5.23c0-1.25-.02-2.85-1.74-2.85-1.74 0-2 1.36-2 2.76v5.32h-4V9.75z" />
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.63 4.74 6.05v5.9h-4v-5.23c0-1.25-.02-2.85-1.74-2.85-1.74 0-2 1.36-2 2.76v5.32h-4V9.75z" />
             </svg>
           </a>
 
           <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#F18F08] text-[#F18F08] transition-all hover:bg-[#F18F08] hover:text-[#140B04] hover:scale-105">
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF8200] text-[#FF8200] bg-[#FFF8EE] transition-all hover:bg-[#FF8200] hover:text-white hover:scale-105">
             <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18.244 2H21.5l-7.1 8.12L22.75 22h-6.54l-5.12-6.7L5.2 22H1.94l7.6-8.68L1.5 2h6.7l4.63 6.1L18.244 2zm-1.14 18h1.8L7.2 3.9H5.27L17.1 20z" />
+              <path
+                d="M18.244 2H21.5l-7.1 8.12L22.75 22h-6.54l-5.12-6.7L5.2 22H1.94l7.6-8.68L1.5 2h6.7l4.63 6.1L18.244 2zm-1.14 18h1.8L7.2 3.9H5.27L17.1 20z" />
             </svg>
           </a>
 
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#F18F08] text-[#F18F08] transition-all hover:bg-[#F18F08] hover:text-[#140B04] hover:scale-105">
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF8200] text-[#FF8200] bg-[#FFF8EE] transition-all hover:bg-[#FF8200] hover:text-white hover:scale-105">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.95.45-1.9 1.95-1.9h1.5V3.7S15.6 3.5 14.3 3.5c-2.75 0-4.55 1.65-4.55 4.65v2.35H6.8v3.3h2.95V22h3.75z" />
+              <path
+                d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.95.45-1.9 1.95-1.9h1.5V3.7S15.6 3.5 14.3 3.5c-2.75 0-4.55 1.65-4.55 4.65v2.35H6.8v3.3h2.95V22h3.75z" />
             </svg>
           </a>
 
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#F18F08] text-[#F18F08] transition-all hover:bg-[#F18F08] hover:text-[#140B04] hover:scale-105">
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF8200] text-[#FF8200] bg-[#FFF8EE] transition-all hover:bg-[#FF8200] hover:text-white hover:scale-105">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="5" />
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none" />
@@ -146,36 +172,37 @@
           </a>
 
           <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
-            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#F18F08] text-[#F18F08] transition-all hover:bg-[#F18F08] hover:text-[#140B04] hover:scale-105">
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-[#FF8200] text-[#FF8200] bg-[#FFF8EE] transition-all hover:bg-[#FF8200] hover:text-white hover:scale-105">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2C2 8.78 2 12 2 12s0 3.22.4 4.8a2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77C22 15.22 22 12 22 12s0-3.22-.4-4.8zM10 15V9l5.2 3L10 15z" />
+              <path
+                d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.27 5 12 5 12 5s-6.27 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2C2 8.78 2 12 2 12s0 3.22.4 4.8a2.5 2.5 0 0 0 1.76 1.77C5.73 19 12 19 12 19s6.27 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77C22 15.22 22 12 22 12s0-3.22-.4-4.8zM10 15V9l5.2 3L10 15z" />
             </svg>
           </a>
         </div>
 
         <!-- Trait orange fin sous réseaux sociaux -->
-        <div class="mt-7 mb-4 h-[2px] w-12 bg-[#F18F08]"></div>
+        <div class="mt-7 mb-4 h-[2px] w-12 bg-[#FF8200]"></div>
 
-        <p class="text-base font-semibold leading-snug text-[#F0E2CB] font-['Plus_Jakarta_Sans']">
+        <p class="text-base font-bold leading-snug text-[#292F36] font-['Plus_Jakarta_Sans']">
           Ensemble, construisons<br />
-          <span class="text-[#F18F08]">le numérique africain.</span>
+          <span class="text-[#FF8200]">le numérique africain.</span>
         </p>
       </div>
 
     </div>
 
-    <!-- Ligne de séparation orange continue -->
-    <div class="h-[1.5px] w-full bg-[#F18F08]/80 mb-6" aria-hidden="true"></div>
+    <!-- Ligne de séparation continue fine -->
+    <div class="h-[1px] w-full bg-[#EDE4D8] mb-6" aria-hidden="true"></div>
 
     <!-- Bas de page : Copyright et Mentions -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F0E2CB]/75 font-['Inter']">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6A717B] font-['Inter']">
       <p>© {{ currentYear }} Afri-code. Tous droits réservés.</p>
       <ul class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs">
-        <li><a routerLink="/" class="hover:text-[#F18F08] transition-colors">Mentions légales</a></li>
-        <li class="text-[#F0E2CB]/40" aria-hidden="true">|</li>
-        <li><a routerLink="/" class="hover:text-[#F18F08] transition-colors">Politique de confidentialité</a></li>
-        <li class="text-[#F0E2CB]/40" aria-hidden="true">|</li>
-        <li><a routerLink="/" class="hover:text-[#F18F08] transition-colors">CGV</a></li>
+        <li><a routerLink="/" class="hover:text-[#FF8200] transition-colors">Mentions légales</a></li>
+        <li class="text-[#D8CFBF]" aria-hidden="true">|</li>
+        <li><a routerLink="/" class="hover:text-[#FF8200] transition-colors">Politique de confidentialité</a></li>
+        <li class="text-[#D8CFBF]" aria-hidden="true">|</li>
+        <li><a routerLink="/" class="hover:text-[#FF8200] transition-colors">CGV</a></li>
       </ul>
     </div>
 

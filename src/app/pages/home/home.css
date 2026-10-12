@@ -3,8 +3,155 @@
   width: 100%;
 }
 
-.hero-section {
-  position: relative;
-  overflow: hidden;
-  background-color: #FFF9F0;
+/* ============================================================
+   1. ANIMATIONS CLÉS (Keyframes)
+   ============================================================ */
+
+/* Balayage lumineux soyeux sur le texte en dégradé */
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Flottement aérien pour badges et puces */
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Pulsation solaire discrète */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 130, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 130, 0, 0);
+  }
+}
+
+/* ============================================================
+   2. EFFETS DE TEXTE DYNAMIQUES
+   ============================================================ */
+
+/* Texte vibrant avec éclat doré/orange animé */
+.text-shimmer {
+  background: linear-gradient(90deg, #FF8200 0%, #FFB347 25%, #FF8200 50%, #FF9A1F 75%, #FF8200 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 5s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Mot dynamique avec transition flip/fade */
+.dynamic-word {
+  display: inline-block;
+  transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.dynamic-word.word-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dynamic-word.word-out {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+}
+
+/* Badge flottant */
+.badge-float {
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+/* Pulse solaire pour pastille statut */
+.pulse-solar {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* ============================================================
+   3. ANIMATIONS AU DÉFILEMENT (Scroll Reveal)
+   ============================================================ */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger pour l'apparition séquentielle */
+.reveal-on-scroll.stagger-1 { transition-delay: 100ms; }
+.reveal-on-scroll.stagger-2 { transition-delay: 200ms; }
+.reveal-on-scroll.stagger-3 { transition-delay: 300ms; }
+.reveal-on-scroll.stagger-4 { transition-delay: 400ms; }
+.reveal-on-scroll.stagger-5 { transition-delay: 500ms; }
+
+/* ============================================================
+   4. MICRO-INTERACTIONS & CARTES
+   ============================================================ */
+
+/* Carte de service avec élévation et halo interactif */
+.interactive-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -8px rgba(255, 130, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-color: rgba(255, 130, 0, 0.45);
+}
+
+/* Trait orange s'élargissant au survol */
+.expand-line {
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.group:hover .expand-line {
+  width: 2.5rem;
+  background-color: #FF8200;
+}
+
+/* Icône ronde avec réaction douce au survol */
+.icon-badge {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.group:hover .icon-badge {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 6px 18px rgba(255, 130, 0, 0.25);
+}
+
+/* Boutons avec légère impulsion tactile */
+.btn-magnetic {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-magnetic:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(255, 130, 0, 0.35);
+}
+
+.btn-magnetic:active {
+  transform: translateY(0) scale(0.98);
 }
