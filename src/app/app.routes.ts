@@ -15,7 +15,7 @@ export const routes: Routes = [
   },
   {
     path: 'a-propos',
-    loadComponent: () => import('./pages/home/home').then((m) => m.Home),
+    loadComponent: () => import('./pages/a-propos/a-propos').then((m) => m.APropos),
   },
   {
     path: 'contact',

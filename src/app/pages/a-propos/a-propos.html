@@ -1,0 +1,267 @@
+<!-- ========================================== -->
+<!-- 1. HERO SECTION — À PROPOS (Racines) -->
+<!-- Fidèle à la maquette : main africaine traçant la carte du continent sur un mur de symboles -->
+<!-- ========================================== -->
+<section
+  class="hero-section relative w-full overflow-hidden bg-[#FFF9F0] flex items-center min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]">
+
+  <!-- IMAGE D'ARRIÈRE-PLAN DU HERO -->
+  <div class="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
+    <img src="Mur1.png" alt="Main traçant la carte de l'Afrique lumineuse sur un mur de symboles ancestraux et de code"
+      class="w-full h-full object-cover object-center lg:object-right" loading="eager" fetchpriority="high" />
+  </div>
+
+
+  <!-- CONTENEUR PRINCIPAL DU HERO (Aligné avec la navigation) -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+
+      <!-- COLONNE GAUCHE : Contenu textuel & Boutons -->
+      <div class="lg:col-span-7 xl:col-span-6 flex flex-col justify-center">
+
+        <!-- A. Surtitre (Eyebrow) -->
+        <div
+          class="eyebrow flex items-center gap-2.5 sm:gap-3 text-xs sm:text-[13px] font-bold tracking-[0.22em] text-[#292F36] uppercase select-none mb-3 sm:mb-4 font-['Plus_Jakarta_Sans']">
+          <span>NOTRE IDENTITÉ</span>
+          <span class="text-[#FF8200] font-black text-sm select-none">&times;</span>
+          <span>NOTRE VISION</span>
+          <span class="text-[#FF8200] font-black text-sm select-none">&times;</span>
+          <span>NOTRE IMPACT</span>
+        </div>
+
+        <!-- B. Titre principal H1 -->
+        <h1
+          class="hero-title text-[#292F36] text-[34px] sm:text-[42px] md:text-[46px] lg:text-[48px] xl:text-[54px] font-extrabold tracking-[-0.025em] leading-[1.08] mb-4 sm:mb-5 font-['Plus_Jakarta_Sans']">
+          Des racines<br />
+          profondes,<br />
+          <span class="text-[#FF8200]">un avenir connecté.</span>
+        </h1>
+
+        <!-- C. Petit séparateur orange -->
+        <div class="w-14 h-[3px] bg-[#FF8200] rounded-full mb-4 sm:mb-5" aria-hidden="true"></div>
+
+        <!-- D. Texte descriptif -->
+        <p
+          class="hero-description text-[#555B63] text-sm sm:text-[15px] leading-relaxed max-w-[450px] mb-7 sm:mb-9 font-normal font-['Inter']">
+          Afri-code puise dans la richesse de l'Afrique pour imaginer et développer des solutions numériques utiles,
+          inclusives et ancrées dans les réalités locales.
+        </p>
+
+        <!-- E. Boutons d'action -->
+        <div class="flex flex-wrap items-center gap-4 sm:gap-5">
+          <!-- Bouton principal : Capsule orange pleine -->
+          <a routerLink="/a-propos" fragment="notre-histoire"
+            class="cta-primary inline-flex items-center justify-center gap-3 px-7 py-3 sm:py-3.5 rounded-full bg-[#FF8200] hover:bg-[#E67500] text-white font-semibold text-sm sm:text-[15px] shadow-sm hover:shadow-md transition-all active:scale-98 group cursor-pointer">
+            <span>Découvrir notre histoire</span>
+            <svg class="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+
+          <!-- Bouton secondaire : Bordure sombre avec flèche ↗ -->
+          <a routerLink="/a-propos" fragment="engagements"
+            class="cta-secondary inline-flex items-center gap-2 px-5 py-2.5 sm:py-3 rounded-full border border-[#292F36]/30 text-[#292F36] hover:border-[#FF8200] hover:text-[#FF8200] font-semibold text-sm sm:text-[15px] transition-all group cursor-pointer">
+            <span>Nos engagements</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- COLONNE DROITE : Espace réservé pour l'image d'arrière-plan (carte Afrique) -->
+      <div class="hidden lg:block lg:col-span-5 xl:col-span-6 pointer-events-none" aria-hidden="true"></div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ========================================== -->
+<!-- 2. NOTRE HISTOIRE & RACINES (Calebasse, Manifeste & Piliers) -->
+<!-- Reproduction fidèle de la maquette officielle Afri-code -->
+<!-- ========================================== -->
+<section id="notre-histoire"
+  class="relative w-full bg-[#FAF5EB] py-16 sm:py-24 overflow-hidden border-t border-[#E8DEC8]/60">
+
+  <!-- Motifs tribaux décoratifs ancrés fidèlement dans les coins supérieurs (comme sur la maquette) -->
+  <!-- Coin supérieur gauche -->
+  <div
+    class="absolute -top-12 -left-12 sm:-top-16 sm:-left-16 md:-top-20 md:-left-20 lg:-top-24 lg:-left-24 w-44 sm:w-60 md:w-72 lg:w-84 xl:w-96 pointer-events-none select-none z-0 overflow-hidden"
+    aria-hidden="true">
+    <img src="motif.png" alt="" class="w-[200%] max-w-none object-contain -translate-x-[0%] -translate-y-[0%]" />
+  </div>
+
+  <!-- Coin supérieur droit -->
+  <div
+    class="absolute -top-12 -right-12 sm:-top-16 sm:-right-16 md:-top-20 md:-right-20 lg:-top-24 lg:-right-24 w-44 sm:w-60 md:w-72 lg:w-84 xl:w-96 pointer-events-none select-none z-0 overflow-hidden"
+    aria-hidden="true">
+    <img src="motif.png" alt="" class="w-[200%] max-w-none object-contain -translate-x-[50%] -translate-y-[0%]" />
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- A. PARTIE SUPÉRIEURE : Grande carte Calebasse à gauche + Manifeste à droite -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+      <!-- COLONNE GAUCHE : Carte photo Calebasse avec citations & badge -->
+      <div class="lg:col-span-6 xl:col-span-6">
+        <div
+          class="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(20,32,43,0.12)] border border-[#EADBCA] group">
+
+          <!-- Image principale : Calebasse d'eau -->
+          <img src="calebassed'eau.png"
+            alt="Offrande de la calebasse d'eau fraîche, symbole de l'écoute et de l'accueil chez Afri-code"
+            class="w-full h-[400px] sm:h-[480px] lg:h-[520px] object-cover object-center group-hover:scale-102 transition-transform duration-700 ease-out"
+            loading="lazy" />
+
+          <!-- Dégradé sombre pour lisibilité -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#14202B]/85 via-[#14202B]/20 to-transparent pointer-events-none">
+          </div>
+
+          <!-- Contenu superposé en bas de carte -->
+          <div class="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 right-6 sm:right-8 z-10">
+            <!-- Badge pill orange -->
+            <span
+              class="inline-block px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] bg-[#E26D00] text-white mb-3 shadow-sm font-['Space_Grotesk']">
+              HÉRITAGE &amp; TRANSMISSION
+            </span>
+            <!-- Citation marquante -->
+            <h3
+              class="text-2xl sm:text-3xl font-extrabold text-white leading-tight font-['Plus_Jakarta_Sans'] tracking-tight">
+              « Avant le code,<br class="hidden sm:inline" />
+              il y a l'écoute. »
+            </h3>
+            <!-- Petit accent sous le titre -->
+            <div class="w-12 h-[3px] bg-[#E26D00] rounded-full mt-3" aria-hidden="true"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COLONNE DROITE : Surtitre, H2 & Manifeste textuel -->
+      <div class="lg:col-span-6 xl:col-span-6 flex flex-col justify-center">
+
+        <!-- Surtitre (Eyebrow) -->
+        <div
+          class="flex items-center gap-2 text-[#E26D00] text-xs sm:text-[13px] font-bold tracking-[0.24em] uppercase mb-4 sm:mb-5 font-['Space_Grotesk']">
+          <span>NOS RACINES &amp; NOTRE MISSION</span>
+
+        </div>
+
+        <!-- Titre principal -->
+        <h2
+          class="text-3xl sm:text-4xl md:text-[44px] lg:text-[46px] xl:text-[50px] font-black text-[#14202B] leading-[1.14] tracking-[-0.03em] mb-6 sm:mb-8 font-['Plus_Jakarta_Sans']">
+          Le futur se code<br />
+          partout. Même ici,<br />
+          <span class="text-[#E26D00]">surtout ici.</span>
+        </h2>
+
+        <!-- Paragraphes de contenu (Texte exact de la maquette) -->
+        <div
+          class="space-y-4 sm:space-y-5 text-[14px] sm:text-[15px] lg:text-[15.5px] text-[#4F5661] font-['Inter'] leading-[1.7] max-w-xl">
+          <p>
+            Née au Burkina Faso et résolument tournée vers l'Afrique de l'Ouest et le monde,
+            <strong class="text-[#14202B] font-semibold">Afri-code</strong> est née d'un constat simple :
+            trop de projets technologiques échouent parce qu'ils ignorent des réalités locales,
+            des usages du terrain et la richesse des contextes africains.
+          </p>
+
+          <p>
+            Dans nos cultures, lorsqu'un voyageur arrive, on lui offre d'abord une calebasse d'eau fraîche
+            pour lui souhaiter la bienvenue, écouter son voyage avant d'aborder le fond.
+            Chez <strong class="text-[#14202B] font-semibold">Afri-code</strong>, nous adoptons cette même posture :
+            nous écoutons profondément vos défis réels avant d'écrire la moindre ligne de code.
+          </p>
+
+          <p>
+            Notre engagement est de conjuguer la rigueur de l'ingénierie logicielle mondiale
+            avec l'intelligence pragmatique de nos environnements pour livrer des produits robustes,
+            pérennes et financièrement viables.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- B. PARTIE INFÉRIEURE : Les 3 Piliers méthodologiques avec séparateurs + Statue/Masque agrandi à droite -->
+    <div class="relative mt-12 sm:mt-16 lg:mt-20 pt-8 sm:pt-12 border-t border-[#E8DEC8]">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+
+        <!-- 3 Piliers / Étapes (8 colonnes sur large écran pour laisser un large espace à la statue) -->
+        <div class="lg:col-span-8 xl:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 lg:gap-8">
+
+          <!-- ÉTAPE 01 : L'intelligence du terrain -->
+          <div class="relative flex flex-col pr-0 sm:pr-4 lg:pr-6 sm:border-r sm:border-[#E8DEC8]/80">
+            <span
+              class="text-2xl sm:text-3xl font-extrabold text-[#E26D00] font-['Space_Grotesk'] leading-none mb-2.5">01</span>
+            <h3 class="text-base sm:text-[18px] font-bold text-[#14202B] font-['Plus_Jakarta_Sans'] mb-2 leading-snug">
+              L'intelligence<br class="hidden sm:inline" />
+              du terrain
+            </h3>
+            <p class="text-xs sm:text-[13.5px] text-[#5A616C] leading-relaxed font-['Inter']">
+              Des solutions façonnées selon les besoins réels, les usages locaux et les réalités concrètes.
+            </p>
+          </div>
+
+          <!-- ÉTAPE 02 : L'exigence du code -->
+          <div class="relative flex flex-col pr-0 sm:pr-4 lg:pr-6 sm:border-r sm:border-[#E8DEC8]/80">
+            <span
+              class="text-2xl sm:text-3xl font-extrabold text-[#E26D00] font-['Space_Grotesk'] leading-none mb-2.5">02</span>
+            <h3 class="text-base sm:text-[18px] font-bold text-[#14202B] font-['Plus_Jakarta_Sans'] mb-2 leading-snug">
+              L'exigence<br class="hidden sm:inline" />
+              du code
+            </h3>
+            <p class="text-xs sm:text-[13.5px] text-[#5A616C] leading-relaxed font-['Inter']">
+              Rigueur technique, architecture robuste et bonnes pratiques pour des systèmes fiables et pérennes.
+            </p>
+          </div>
+
+          <!-- ÉTAPE 03 : L'impact dans la durée -->
+          <div class="relative flex flex-col">
+            <span
+              class="text-2xl sm:text-3xl font-extrabold text-[#E26D00] font-['Space_Grotesk'] leading-none mb-2.5">03</span>
+            <h3 class="text-base sm:text-[18px] font-bold text-[#14202B] font-['Plus_Jakarta_Sans'] mb-2 leading-snug">
+              L'impact<br class="hidden sm:inline" />
+              dans la durée
+            </h3>
+            <p class="text-xs sm:text-[13.5px] text-[#5A616C] leading-relaxed font-['Inter']">
+              Des produits digitaux pérennes créant de la valeur concrète bien après leur déploiement.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- ZONE DÉCORATIVE STATUE & MASQUE ANCESTRAL AVEC DISQUE SOLAIRE (Agrandie et visible partout) -->
+        <div
+          class="lg:col-span-4 xl:col-span-4 relative flex items-center justify-center lg:justify-end mt-4 lg:mt-0 select-none overflow-visible">
+
+          <!-- Disque solaire orange bien visible et contrasté -->
+          <div
+            class="absolute w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-gradient-to-tr from-[#E26D00] to-[#FAAB03] opacity-95 shadow-xl -right-4 sm:-right-8 lg:-right-12 z-0">
+          </div>
+
+          <!-- Statue sculptée agrandie et mise en valeur -->
+          <div
+            class="relative z-10 flex items-end justify-end h-[280px] sm:h-[320px] lg:h-[360px] w-full max-w-[280px] sm:max-w-[320px] lg:max-w-none">
+            <img src="Statue.png"
+              alt="Statue ancestrale sculptée en bois, symbole d'ancrage culturel et d'identité africaine"
+              class="h-full w-auto max-h-[360px] object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.35)] scale-110 lg:scale-125 transform origin-bottom-right"
+              loading="lazy" />
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
