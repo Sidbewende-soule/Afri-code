@@ -1,0 +1,5 @@
+/* Styles spécifiques à la page À Propos (Racines) */
+:host {
+  display: block;
+  width: 100%;
+}
