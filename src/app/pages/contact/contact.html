@@ -1,0 +1,306 @@
+<!-- ========================================== -->
+<!-- PAGE CONTACT AFRI-CODE (PALABRE) -->
+<!-- Reproduction fidèle et haut de gamme de la maquette officielle -->
+<!-- ========================================== -->
+<div
+  class="contact-page relative w-full overflow-hidden bg-[#F8F2E8] min-h-[calc(100vh-105px)] flex items-center py-6 sm:py-8 lg:py-10">
+
+  <!-- Motifs géométriques africains discrets dans les coins (beige et orange pâle) -->
+  <!-- Coin supérieur gauche -->
+  <div
+    class="pointer-events-none absolute -top-12 -left-12 sm:-top-16 sm:-left-16 md:-top-20 md:-left-20 w-44 sm:w-60 md:w-72 select-none z-0 opacity-40 overflow-hidden"
+    aria-hidden="true">
+    <img src="motif.png" alt="" class="w-[200%] max-w-none object-contain -translate-x-[0%] -translate-y-[0%]" />
+  </div>
+
+  <!-- Coin inférieur gauche -->
+  <div
+    class="pointer-events-none absolute -bottom-12 -left-12 sm:-bottom-16 sm:-left-16 md:-bottom-20 md:-left-20 w-44 sm:w-60 md:w-72 select-none z-0 opacity-35 overflow-hidden"
+    aria-hidden="true">
+    <img src="motif.png" alt="" class="w-[200%] max-w-none object-contain -translate-x-[0%] translate-y-[30%]" />
+  </div>
+
+  <!-- CONTENEUR PRINCIPAL ASYMÉTRIQUE EN 3 ZONES -->
+  <!-- Marges horizontales 7% sur desktop de référence 1680x900 -->
+  <div class="relative z-10 w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-[6%] xl:px-[7%]">
+
+    <div class="contact-grid">
+
+      <!-- ======================================================== -->
+      <!-- 1. EN-TÊTE : SURTITRE, TITRE H1 ET PARAGRAPHE D'INTRODUCTION -->
+      <!-- Sur desktop : s'étend au-dessus des coordonnées et du formulaire -->
+      <!-- Sur mobile : 1ère position (order: 1) -->
+      <!-- ======================================================== -->
+      <header class="contact-header">
+        <!-- En-tête : Trait orange et surtitre espacé CONTACTEZ-NOUS -->
+        <div
+          class="flex items-center gap-3 text-xs sm:text-[13px] font-bold tracking-[0.22em] text-[#FF7900] uppercase font-['Space_Grotesk'] mb-3 select-none">
+          <span class="w-8 h-[2.5px] bg-[#FF7900] rounded-full" aria-hidden="true"></span>
+          <span>CONTACTEZ-NOUS</span>
+        </div>
+
+        <!-- Titre principal bicolore sur deux lignes -->
+        <h1
+          class="text-[#111820] text-3xl sm:text-4xl md:text-[46px] lg:text-[48px] xl:text-[56px] 2xl:text-[62px] font-extrabold tracking-[-0.03em] leading-[1.08] mb-3.5 font-['Plus_Jakarta_Sans']">
+          <span class="block">Parlons de vos</span>
+          <span class="block text-[#FF7900]">projets numériques.</span>
+        </h1>
+
+        <!-- Texte descriptif d'accompagnement -->
+        <p class="text-[#687481] text-xs sm:text-sm md:text-[14.5px] leading-relaxed max-w-xl font-normal font-['Inter'] mb-6 lg:mb-8">
+          Une idée, un besoin, une question ? Notre équipe est à votre écoute pour vous accompagner dans la
+          réalisation de vos projets digitaux.
+        </p>
+      </header>
+
+      <!-- ======================================================== -->
+      <!-- 2. FORMULAIRE DE CONTACT (Env. 32% largeur sur desktop) -->
+      <!-- Sur mobile : 2ème position (order: 2) -->
+      <!-- ======================================================== -->
+      <section class="contact-form" aria-label="Formulaire d'envoi de message">
+        <div
+          class="bg-white/95 rounded-[12px] p-6 sm:p-7 xl:p-8 shadow-[0_8px_24px_rgba(0,0,0,0.035)] border border-[#E8DEC8]/70 relative">
+
+          <!-- En-tête du formulaire -->
+          <h2 class="text-base sm:text-lg font-bold text-[#111820] font-['Plus_Jakarta_Sans']">
+            Envoyez-nous un message
+          </h2>
+          <p class="text-xs sm:text-[13px] text-[#687481] mt-0.5 mb-5 font-['Inter']">
+            Nous vous répondrons dans les plus brefs délais.
+          </p>
+
+          <!-- ÉTAT 1 : Formulaire actif -->
+          @if (!isSubmitted()) {
+            <form (ngSubmit)="onSubmit()" class="space-y-3.5" novalidate>
+
+              <!-- Deux champs côte à côte : Nom et Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="contact-name" class="sr-only">Votre nom *</label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    required
+                    [(ngModel)]="formData().name"
+                    placeholder="Votre nom *"
+                    class="w-full px-4 py-3 text-xs sm:text-sm text-[#111820] placeholder-[#8A95A1] bg-[#FAF6F0] rounded-xl border border-[#E5DDD0] focus:border-[#FF7900] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#FF7900] transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label for="contact-email" class="sr-only">Votre email *</label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    required
+                    [(ngModel)]="formData().email"
+                    placeholder="Votre email *"
+                    class="w-full px-4 py-3 text-xs sm:text-sm text-[#111820] placeholder-[#8A95A1] bg-[#FAF6F0] rounded-xl border border-[#E5DDD0] focus:border-[#FF7900] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#FF7900] transition-all"
+                  />
+                </div>
+              </div>
+
+              <!-- Champ Objet pleine largeur -->
+              <div>
+                <label for="contact-subject" class="sr-only">Objet *</label>
+                <input
+                  id="contact-subject"
+                  name="subject"
+                  type="text"
+                  required
+                  [(ngModel)]="formData().subject"
+                  placeholder="Objet *"
+                  class="w-full px-4 py-3 text-xs sm:text-sm text-[#111820] placeholder-[#8A95A1] bg-[#FAF6F0] rounded-xl border border-[#E5DDD0] focus:border-[#FF7900] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#FF7900] transition-all"
+                />
+              </div>
+
+              <!-- Zone de texte pleine largeur pour le Message -->
+              <div>
+                <label for="contact-message" class="sr-only">Votre message *</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="4"
+                  required
+                  [(ngModel)]="formData().message"
+                  placeholder="Votre message *"
+                  class="w-full px-4 py-3 text-xs sm:text-sm text-[#111820] placeholder-[#8A95A1] bg-[#FAF6F0] rounded-xl border border-[#E5DDD0] focus:border-[#FF7900] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#FF7900] transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Alerte d'erreur dynamique -->
+              @if (errorMessage()) {
+                <div class="p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2 animate-fadeIn">
+                  <svg class="w-4 h-4 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{{ errorMessage() }}</span>
+                </div>
+              }
+
+              <!-- Bouton pleine largeur orange « Envoyer le message → » -->
+              <div class="pt-1">
+                <button
+                  type="submit"
+                  [disabled]="isSubmitting()"
+                  class="w-full py-3.5 px-6 rounded-[14px] bg-[#FF7900] hover:bg-[#E66D00] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all active:scale-[0.98] disabled:opacity-70 flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  @if (!isSubmitting()) {
+                    <span>Envoyer le message</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  } @else {
+                    <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Envoi en cours...</span>
+                  }
+                </button>
+              </div>
+
+            </form>
+          } @else {
+            <!-- ÉTAT 2 : Confirmation de succès -->
+            <div class="py-6 text-center space-y-3">
+              <div class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto shadow-sm">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-[#111820] font-['Plus_Jakarta_Sans']">
+                Message envoyé avec succès !
+              </h3>
+              <p class="text-xs sm:text-[13px] text-[#687481] font-['Inter'] leading-relaxed max-w-xs mx-auto">
+                Merci de nous avoir contactés. Notre équipe étudiera votre demande et vous répondra dans les plus brefs délais.
+              </p>
+              <div class="pt-2">
+                <button
+                  type="button"
+                  (click)="resetForm()"
+                  class="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-[#E8DEC8] text-[#111820] hover:text-[#FF7900] hover:border-[#FF7900] font-semibold text-xs transition-colors cursor-pointer"
+                >
+                  Envoyer un autre message
+                </button>
+              </div>
+            </div>
+          }
+
+        </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- 3. ZONE COORDONNÉES (Env. 22% largeur sur desktop) -->
+      <!-- Sur mobile : 3ème position (order: 3) -->
+      <!-- ======================================================== -->
+      <aside class="contact-coords flex flex-col justify-center space-y-4 pt-1 lg:pt-0" aria-label="Nos coordonnées">
+
+        <!-- BLOC 1 — NOTRE ADRESSE -->
+        <div class="flex items-center gap-3.5 group">
+          <div
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#F3EBE0] border border-[#E8DEC8] flex items-center justify-center text-[#FF7900] shrink-0 group-hover:bg-[#FF7900] group-hover:text-white transition-colors duration-200 shadow-sm"
+            aria-hidden="true">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#687481] uppercase tracking-[0.16em] font-['Space_Grotesk']">
+              NOTRE ADRESSE
+            </div>
+            <div class="text-xs sm:text-[13.5px] font-semibold text-[#111820] font-['Plus_Jakarta_Sans'] mt-0.5">
+              Ouagadougou, Burkina Faso
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOC 2 — EMAIL -->
+        <div class="flex items-center gap-3.5 group">
+          <div
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#F3EBE0] border border-[#E8DEC8] flex items-center justify-center text-[#FF7900] shrink-0 group-hover:bg-[#FF7900] group-hover:text-white transition-colors duration-200 shadow-sm"
+            aria-hidden="true">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#687481] uppercase tracking-[0.16em] font-['Space_Grotesk']">
+              EMAIL
+            </div>
+            <a href="mailto:contact@afri-code.com"
+              class="text-xs sm:text-[13.5px] font-semibold text-[#111820] hover:text-[#FF7900] transition-colors font-['Plus_Jakarta_Sans'] mt-0.5 inline-block">
+              contact&#64;afri-code.com
+            </a>
+          </div>
+        </div>
+
+        <!-- BLOC 3 — TÉLÉPHONE -->
+        <div class="flex items-center gap-3.5 group">
+          <div
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#F3EBE0] border border-[#E8DEC8] flex items-center justify-center text-[#FF7900] shrink-0 group-hover:bg-[#FF7900] group-hover:text-white transition-colors duration-200 shadow-sm"
+            aria-hidden="true">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#687481] uppercase tracking-[0.16em] font-['Space_Grotesk']">
+              TÉLÉPHONE
+            </div>
+            <a href="tel:+22625500000"
+              class="text-xs sm:text-[13.5px] font-semibold text-[#111820] hover:text-[#FF7900] transition-colors font-['Plus_Jakarta_Sans'] mt-0.5 inline-block">
+              +226 25 50 00 00
+            </a>
+          </div>
+        </div>
+
+        <!-- BLOC 4 — HORAIRES -->
+        <div class="flex items-center gap-3.5 group">
+          <div
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#F3EBE0] border border-[#E8DEC8] flex items-center justify-center text-[#FF7900] shrink-0 group-hover:bg-[#FF7900] group-hover:text-white transition-colors duration-200 shadow-sm"
+            aria-hidden="true">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-[11px] font-bold text-[#687481] uppercase tracking-[0.16em] font-['Space_Grotesk']">
+              HORAIRES
+            </div>
+            <div class="text-xs sm:text-[13px] font-medium text-[#111820] font-['Inter'] mt-0.5 leading-snug">
+              Lun – Ven : 8h00 – 18h00<br />
+              Sam : 8h00 – 12h00
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ======================================================== -->
+      <!-- 4. ZONE DROITE : ILLUSTRATION NUMÉRIQUE AFRICAINE (Env. 42% largeur) -->
+      <!-- Sur mobile : 4ème position (order: 4) -->
+      <!-- ======================================================== -->
+      <figure class="contact-illust select-none mt-8 lg:mt-0" aria-label="Illustration numérique africaine">
+        <div class="relative w-full max-w-[540px] lg:max-w-none pointer-events-none flex items-center lg:items-end justify-center lg:justify-end h-full">
+          <img
+            src="contact-africa-illustration.png"
+            alt="Afri-code - Ensemble, construisons le numérique africain - Carte 3D de l'Afrique et écosystème numérique"
+            class="contact-illust-img w-full h-auto lg:h-full max-h-[780px] object-contain object-center lg:object-right-bottom"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </figure>
+
+    </div>
+
+  </div>
+
+</div>

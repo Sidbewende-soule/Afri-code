@@ -1,0 +1,5 @@
+/* Styles spécifiques à la page Nos Services (Baobab) */
+:host {
+  display: block;
+  width: 100%;
+}

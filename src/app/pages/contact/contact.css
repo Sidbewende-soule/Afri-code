@@ -1,0 +1,95 @@
+/* Styles spécifiques à la page Contact Afri-code (Palabre) */
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Disposition sur Mobile (< 1024px) */
+/* Empilement strict selon la spécification : */
+/* 1. Titre & introduction, 2. Formulaire, 3. Coordonnées, 4. Illustration */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  order: 1;
+}
+
+.contact-form {
+  order: 2;
+  margin-top: 0.5rem;
+}
+
+.contact-coords {
+  order: 3;
+  margin-top: 1.75rem;
+}
+
+.contact-illust {
+  order: 4;
+  margin-top: 2rem;
+}
+
+/* Disposition Desktop (≥ 1024px) */
+/* Composition asymétrique conforme aux proportions de la maquette : */
+/* Zone gauche ~22%, Formulaire ~32%, Illustration ~42% */
+@media (min-width: 1024px) {
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 1.15fr) minmax(360px, 1.6fr) minmax(420px, 2.1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header illust"
+      "coords form   illust";
+    column-gap: 1.75rem;
+    row-gap: 1.25rem;
+    align-items: center;
+  }
+
+  .contact-header {
+    grid-area: header;
+    order: initial;
+    margin-top: 0;
+  }
+
+  .contact-coords {
+    grid-area: coords;
+    order: initial;
+    margin-top: 0;
+  }
+
+  .contact-form {
+    grid-area: form;
+    order: initial;
+    margin-top: 0;
+  }
+
+  .contact-illust {
+    grid-area: illust;
+    order: initial;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .contact-illust-img {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 28px);
+    mask-image: linear-gradient(to right, transparent 0%, black 28px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .contact-grid {
+    column-gap: 2.25rem;
+    row-gap: 1.75rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .contact-grid {
+    column-gap: 3rem;
+  }
+}

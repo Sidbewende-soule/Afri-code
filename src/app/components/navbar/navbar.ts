@@ -21,9 +21,7 @@ export class Navbar {
   protected readonly navItems: readonly NavItem[] = [
     { path: '/', label: 'Accueil', exact: true },
     { path: '/a-propos', label: 'À propos' },
-    { path: '/services', label: 'Nos solutions' },
-    { path: '/realisations', label: 'Projets' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/services', label: 'Nos Services' },
   ];
 
   protected toggleMobileMenu(): void {

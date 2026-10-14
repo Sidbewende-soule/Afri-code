@@ -7,7 +7,12 @@ export const routes: Routes = [
   },
   {
     path: 'services',
-    loadComponent: () => import('./pages/home/home').then((m) => m.Home),
+    loadComponent: () => import('./pages/nosservices/nosservices').then((m) => m.Nosservices),
+  },
+  {
+    path: 'nosservices',
+    redirectTo: 'services',
+    pathMatch: 'full',
   },
   {
     path: 'realisations',
@@ -19,7 +24,7 @@ export const routes: Routes = [
   },
   {
     path: 'contact',
-    loadComponent: () => import('./pages/home/home').then((m) => m.Home),
+    loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
   },
   {
     path: '**',
