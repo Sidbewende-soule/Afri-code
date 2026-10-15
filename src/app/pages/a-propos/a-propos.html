@@ -1,81 +1,121 @@
 <!-- ========================================== -->
 <!-- 1. HERO SECTION — À PROPOS (Racines) -->
-<!-- Fidèle à la maquette : main africaine traçant la carte du continent sur un mur de symboles -->
+<!-- Fidèle à la maquette officielle mobile et desktop -->
 <!-- ========================================== -->
-<section
-  class="hero-section relative w-full overflow-hidden bg-[#FFF9F0] flex items-center min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]">
+<section class="apropos-hero relative w-full overflow-hidden bg-[#FFF9EF]">
 
-  <!-- IMAGE D'ARRIÈRE-PLAN DU HERO -->
+  <!-- IMAGES D'ARRIÈRE-PLAN DU HERO ADAPTÉES MOBILE / DESKTOP -->
   <div class="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
+    <!-- Version mobile (< lg) : photographie de la main et de la carte d'Afrique cadrée en bas, fond ivoire pur en haut -->
+    <img src="hero-apropos-mobile-clean.png" alt="Afri-code - Racines profondes et avenir connecté"
+      class="apropos-hero__mobile-background w-full h-full object-cover object-bottom lg:hidden" loading="eager"
+      fetchpriority="high" />
+
+    <!-- Version desktop (>= lg) : composition panoramique avec la main et la carte à droite -->
     <img src="Mur1.png" alt="Main traçant la carte de l'Afrique lumineuse sur un mur de symboles ancestraux et de code"
-      class="w-full h-full object-cover object-center lg:object-right" loading="eager" fetchpriority="high" />
+      class="hidden lg:block w-full h-full object-cover object-right" loading="eager" fetchpriority="high" />
   </div>
 
+  <!-- MOTIFS DÉCORATIFS LATÉRAUX (réservés au format desktop) -->
+  <!-- 1. Chevrons géométriques bord droit -->
+  <div
+    class="apropos-hero__decor apropos-hero__decor--right hidden lg:block absolute right-0 top-16 sm:top-20 w-16 xs:w-20 sm:w-24 pointer-events-none select-none z-[1] overflow-hidden opacity-90"
+    aria-hidden="true">
+    <svg viewBox="0 0 100 380" fill="none" stroke="#FFD9B0" stroke-width="13" stroke-linecap="square"
+      class="w-full h-auto">
+      <path d="M110,20 L32,98 L110,176" />
+      <path d="M110,75 L48,137 L110,199" />
+      <path d="M110,145 L32,223 L110,301" />
+    </svg>
+  </div>
+
+  <!-- 2. Chevrons et losanges bord bas-gauche -->
+  <div
+    class="apropos-hero__decor apropos-hero__decor--left hidden lg:block absolute left-0 bottom-4 sm:bottom-10 w-18 xs:w-22 sm:w-28 pointer-events-none select-none z-[1] overflow-hidden opacity-90"
+    aria-hidden="true">
+    <svg viewBox="0 0 110 320" fill="none" stroke="#FFD9B0" stroke-width="13" stroke-linecap="square"
+      class="w-full h-auto">
+      <path d="M-10,35 L68,113 L-10,191" />
+      <path d="M-10,95 L48,153 L-10,211" />
+      <path d="M-10,165 L68,243 L-10,321" />
+      <rect x="82" y="125" width="14" height="14" transform="rotate(45 89 132)" fill="#FFD9B0" stroke="none" />
+      <rect x="70" y="170" width="12" height="12" transform="rotate(45 76 176)" fill="#FFD9B0" stroke="none" />
+    </svg>
+  </div>
 
   <!-- CONTENEUR PRINCIPAL DU HERO (Aligné avec la navigation) -->
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+  <div
+    class="apropos-hero__content relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-18 py-12 sm:py-14 lg:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
       <!-- COLONNE GAUCHE : Contenu textuel & Boutons -->
       <div class="lg:col-span-7 xl:col-span-6 flex flex-col justify-center">
-
-        <!-- A. Surtitre (Eyebrow) -->
-        <div
-          class="eyebrow flex items-center gap-2.5 sm:gap-3 text-xs sm:text-[13px] font-bold tracking-[0.22em] text-[#292F36] uppercase select-none mb-3 sm:mb-4 font-['Plus_Jakarta_Sans']">
-          <span>NOTRE IDENTITÉ</span>
-          <span class="text-[#FF8200] font-black text-sm select-none">&times;</span>
-          <span>NOTRE VISION</span>
-          <span class="text-[#FF8200] font-black text-sm select-none">&times;</span>
-          <span>NOTRE IMPACT</span>
+        <!-- A. Badge de section, harmonisé avec le hero Nos services -->
+        <div class="apropos-hero__eyebrow flex items-center gap-2.5 sm:gap-3 mb-5 sm:mb-5 select-none">
+          <span class="text-[#F18F08] text-xs font-black" aria-hidden="true">◆</span>
+          <span class="text-xs sm:text-[13px] font-bold tracking-[0.22em] text-[#102638] uppercase font-['Plus_Jakarta_Sans']">À PROPOS</span>
+          <span class="h-[1.5px] w-12 sm:w-16 bg-gradient-to-r from-[#F18F08] to-transparent rounded-full ml-1" aria-hidden="true"></span>
         </div>
 
-        <!-- B. Titre principal H1 -->
+        <!-- B. Titre principal H1 (Strictement 3 lignes comme sur la maquette) -->
         <h1
-          class="hero-title text-[#292F36] text-[34px] sm:text-[42px] md:text-[46px] lg:text-[48px] xl:text-[54px] font-extrabold tracking-[-0.025em] leading-[1.08] mb-4 sm:mb-5 font-['Plus_Jakarta_Sans']">
+          class="apropos-hero__title text-[#001D51] font-extrabold tracking-[-0.035em] leading-[1.08] sm:leading-[1.06] mb-5 font-['Plus_Jakarta_Sans']">
           Des racines<br />
           profondes,<br />
-          <span class="text-[#FF8200]">un avenir connecté.</span>
+          <span class="text-[#FAAB03]">un avenir connecté.</span>
         </h1>
 
-        <!-- C. Petit séparateur orange -->
-        <div class="w-14 h-[3px] bg-[#FF8200] rounded-full mb-4 sm:mb-5" aria-hidden="true"></div>
-
-        <!-- D. Texte descriptif -->
+        <!-- C. Paragraphe descriptif (Texte exact mot pour mot) -->
         <p
-          class="hero-description text-[#555B63] text-sm sm:text-[15px] leading-relaxed max-w-[450px] mb-7 sm:mb-9 font-normal font-['Inter']">
+          class="hero-description hidden lg:block text-[#001D51] text-[15px] sm:text-[15px] lg:text-[15.5px] leading-relaxed max-w-[340px] xs:max-w-[400px] sm:max-w-[500px] mb-7 sm:mb-9 font-normal font-['Inter']">
           Afri-code puise dans la richesse de l'Afrique pour imaginer et développer des solutions numériques utiles,
           inclusives et ancrées dans les réalités locales.
         </p>
 
-        <!-- E. Boutons d'action -->
-        <div class="flex flex-wrap items-center gap-4 sm:gap-5">
+        <!-- D. Boutons d'action -->
+        <div class="hidden lg:flex flex-col sm:flex-row items-start sm:items-center gap-3.5 sm:gap-4">
           <!-- Bouton principal : Capsule orange pleine -->
           <a routerLink="/a-propos" fragment="notre-histoire"
-            class="cta-primary inline-flex items-center justify-center gap-3 px-7 py-3 sm:py-3.5 rounded-full bg-[#FF8200] hover:bg-[#E67500] text-white font-semibold text-sm sm:text-[15px] shadow-sm hover:shadow-md transition-all active:scale-98 group cursor-pointer">
+            class="cta-primary inline-flex items-center justify-center gap-3 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#FF7900] hover:bg-[#E66D00] text-white font-semibold text-xs xs:text-sm sm:text-[15px] shadow-sm hover:shadow-md transition-all active:scale-98 group cursor-pointer shrink-0">
             <span>Découvrir notre histoire</span>
-            <svg class="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            <span
+              class="text-base sm:text-lg leading-none transform group-hover:translate-x-1 transition-transform">→</span>
           </a>
 
-          <!-- Bouton secondaire : Bordure sombre avec flèche ↗ -->
+          <!-- Bouton secondaire : Capsule contour bleu nuit -->
           <a routerLink="/a-propos" fragment="engagements"
-            class="cta-secondary inline-flex items-center gap-2 px-5 py-2.5 sm:py-3 rounded-full border border-[#292F36]/30 text-[#292F36] hover:border-[#FF8200] hover:text-[#FF8200] font-semibold text-sm sm:text-[15px] transition-all group cursor-pointer">
+            class="cta-secondary inline-flex items-center justify-center gap-3 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-transparent hover:bg-[#102638]/5 border border-[#102638] text-[#102638] font-semibold text-xs xs:text-sm sm:text-[15px] transition-all active:scale-98 group cursor-pointer shrink-0">
             <span>Nos engagements</span>
-            <svg class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M7 17L17 7M17 7H7M17 7v10" />
-            </svg>
+            <span
+              class="text-base sm:text-lg leading-none transform group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
 
       </div>
 
-      <!-- COLONNE DROITE : Espace réservé pour l'image d'arrière-plan (carte Afrique) -->
+      <!-- COLONNE DROITE : Espace réservé pour l'image d'arrière-plan (carte Afrique sur Desktop) -->
       <div class="hidden lg:block lg:col-span-5 xl:col-span-6 pointer-events-none" aria-hidden="true"></div>
 
     </div>
+  </div>
+
+  <!-- Médaillon mobile : l'image accompagne le manifeste sans recouvrir le texte. -->
+  <div class="apropos-hero__mobile-follow lg:hidden px-6 sm:px-10">
+    <div class="apropos-hero__mobile-summary">
+      <p class="text-[#001D51] text-[15px] leading-relaxed font-normal font-['Inter']">
+        Afri-code puise dans la richesse de l'Afrique pour imaginer et développer des solutions numériques utiles,
+        inclusives et ancrées dans les réalités locales.
+      </p>
+      <div class="apropos-hero__mobile-medallion" aria-hidden="true">
+        <img src="hero-apropos-mobile-clean.png" alt="" loading="eager" fetchpriority="high" />
+      </div>
+    </div>
+    <a routerLink="/a-propos" fragment="notre-histoire"
+      class="cta-primary apropos-hero__mobile-cta inline-flex min-h-12 items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-[#FAAB03] hover:bg-[#E59B02] text-white font-semibold text-sm shadow-lg shadow-[#FAAB03]/25 active:translate-y-0 transition-all duration-300 group cursor-pointer">
+      <span>Découvrir notre histoire</span>
+      <span
+        class="text-base leading-none transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+    </a>
   </div>
 
 </section>

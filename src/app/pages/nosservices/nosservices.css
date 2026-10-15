@@ -3,3 +3,125 @@
   display: block;
   width: 100%;
 }
+
+/*
+ * Hero mobile: the desktop artwork remains a single full-bleed composition.
+ * On smaller screens its photograph is moved below the editorial copy so the
+ * message stays readable and the crop can give the sculpture room to breathe.
+ */
+.services-hero {
+  isolation: isolate;
+}
+
+.services-hero__desktop-art {
+  display: none;
+}
+
+.services-hero__title {
+  font-size: clamp(2rem, 9.2vw, 2.75rem);
+}
+
+.services-hero__content::before,
+.services-hero__content::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 5.25rem;
+  height: 14rem;
+  top: 7.2rem;
+  opacity: .16;
+  pointer-events: none;
+  background-image: linear-gradient(45deg, transparent 43%, #faab03 44% 56%, transparent 57%),
+    linear-gradient(-45deg, transparent 43%, #faab03 44% 56%, transparent 57%);
+  background-size: 2.2rem 2.2rem;
+}
+
+.services-hero__content::before {
+  left: -4.1rem;
+}
+
+.services-hero__content::after {
+  right: -4.1rem;
+}
+
+.services-hero__mobile-follow {
+  position: relative;
+  z-index: 1;
+  margin-top: -1.15rem;
+  padding-bottom: 2.75rem;
+}
+
+.services-hero__mobile-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 9.25rem;
+  align-items: end;
+  gap: .75rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-hero__mobile-summary .services-hero__description {
+  margin: 0;
+}
+
+.services-hero__mobile-medallion {
+  width: 9.25rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: .4rem solid #fff9ef;
+  border-radius: 48% 52% 50% 46%;
+  box-shadow: 0 1rem 2rem rgba(0, 29, 81, .18);
+}
+
+.services-hero__mobile-medallion img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% center;
+  transform: scale(1.48);
+  transform-origin: 90% 52%;
+  filter: saturate(1.08) contrast(1.08);
+}
+
+.services-hero__mobile-cta {
+  min-width: min(100%, 17.5rem);
+}
+
+@media (min-width: 640px) {
+  .services-hero__title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-hero {
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    align-items: center;
+  }
+
+  .services-hero__title {
+    font-size: 3.25rem;
+  }
+
+  .services-hero__desktop-art {
+    display: block;
+  }
+
+  .services-hero__content::before,
+  .services-hero__content::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .services-hero__title {
+    font-size: 3.625rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .services-hero__title {
+    font-size: 3.875rem;
+  }
+}

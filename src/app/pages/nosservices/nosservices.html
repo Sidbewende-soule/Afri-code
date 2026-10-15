@@ -1,21 +1,17 @@
 <!-- ========================================== -->
 <!-- 1. HERO SECTION — NOS SERVICES (Reproduction fidèle de la maquette de référence) -->
 <!-- ========================================== -->
-<section
-    class="hero-section relative w-full overflow-hidden bg-[#FFF9EF] flex items-center min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]">
+<section class="services-hero relative w-full overflow-hidden bg-[#FFF9EF]">
 
-    <!-- SCÈNE PHOTOGRAPHIQUE & ARRIÈRE-PLAN AVEC FONDU PROGRESSIF NATUREL -->
-    <div class="absolute inset-0 z-0 select-none overflow-hidden" aria-hidden="true">
+    <!-- La scène est conservée en arrière-plan à partir du format desktop. -->
+    <div class="services-hero__desktop-art absolute inset-0 z-0 select-none overflow-hidden" aria-hidden="true">
         <img src="hero-nos-services-art-clean.png"
             alt="Afri-code - Œuvre artistique africaine contemporaine, sculpture en bois, céramique et textile en galerie d'art"
             class="w-full h-full object-cover object-right" loading="eager" fetchpriority="high" />
-        <!-- Voile ivoire protecteur exclusif mobile pour garantir une lecture naturelle du texte au-dessus de la photo -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#FFF9EF] via-[#FFF9EF]/92 via-[68%] to-transparent lg:hidden pointer-events-none"
-            aria-hidden="true"></div>
     </div>
 
     <!-- CONTENEUR DU CONTENU ÉDITORIAL (Zone gauche : ~45 à 50% de la largeur visuelle) -->
-    <div class="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-18 py-10 sm:py-14 lg:py-16">
+    <div class="services-hero__content relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-18 py-12 sm:py-14 lg:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
 
             <!-- COLONNE GAUCHE : Logo, Libellé de section, Titre principal, Paragraphe & Bouton CTA -->
@@ -24,8 +20,8 @@
 
 
                 <!-- 2. LIBELLÉ DE SECTION (« NOS SERVICES » avec losange et filet orange) -->
-                <div class="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-5 select-none">
-                    <span class="text-[#F18F08] text-xs font-black select-none">◆</span>
+                <div class="services-hero__eyebrow flex items-center gap-2.5 sm:gap-3 mb-5 sm:mb-5 select-none">
+                    <span class="text-[#F18F08] text-xs font-black select-none" aria-hidden="true">◆</span>
                     <span
                         class="text-xs sm:text-[13px] font-bold tracking-[0.22em] text-[#102638] uppercase font-['Plus_Jakarta_Sans']">
                         NOS SERVICES
@@ -36,23 +32,23 @@
 
                 <!-- 3. GRAND TITRE PRINCIPAL (Typographie imposante, très grasse, moderne sans-serif) -->
                 <h1
-                    class="hero-title text-[#102638] text-[36px] sm:text-[44px] md:text-[50px] lg:text-[52px] xl:text-[58px] 2xl:text-[62px] font-extrabold tracking-[-0.035em] leading-[1.06] mb-4 sm:mb-5 font-['Plus_Jakarta_Sans']">
+                    class="services-hero__title text-[#001D51] font-extrabold tracking-[-0.035em] leading-[1.08] sm:leading-[1.06] mb-5 font-['Plus_Jakarta_Sans']">
                     Vos ambitions<br />
-                    <span class="text-[#F18F08]">méritent des solutions</span><br />
+                    <span class="text-[#FAAB03]">méritent des solutions</span><br />
                     à leur mesure.
                 </h1>
 
                 <!-- 4. PARAGRAPHE DE PRÉSENTATION (Texte exact mot pour mot) -->
                 <p
-                    class="hero-description text-[#4A5568] text-sm sm:text-[15px] lg:text-[15.5px] leading-relaxed max-w-[500px] mb-7 sm:mb-9 font-normal font-['Inter']">
+                    class="services-hero__description hidden lg:block text-[#001D51] text-[15px] sm:text-[15px] lg:text-[15.5px] leading-relaxed max-w-[340px] xs:max-w-[400px] sm:max-w-[500px] mb-7 sm:mb-9 font-normal font-['Inter']">
                     Nous concevons des solutions numériques sur mesure pour accompagner la croissance de votre
                     entreprise, en alliant innovation technologique et savoir-faire africain.
                 </p>
 
                 <!-- 5. BOUTON D'ACTION PRINCIPAL (« Découvrir nos services → ») -->
-                <div class="flex items-center">
+                <div class="hidden lg:flex items-center">
                     <a routerLink="/services" fragment="nos-offres"
-                        class="cta-primary inline-flex items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#F18F08] hover:bg-[#E07E00] text-white font-semibold text-sm sm:text-[15px] shadow-md hover:shadow-lg hover:shadow-[#F18F08]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group cursor-pointer">
+                        class="cta-primary inline-flex min-h-12 items-center justify-center gap-3 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#FAAB03] hover:bg-[#E59B02] text-white font-semibold text-sm sm:text-[15px] shadow-md hover:shadow-lg hover:shadow-[#FAAB03]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group cursor-pointer">
                         <span>Découvrir nos services</span>
                         <span
                             class="text-base sm:text-lg leading-none transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
@@ -67,6 +63,24 @@
             </div>
 
         </div>
+    </div>
+
+    <!-- Médaillon mobile : l'image devient un accent qui accompagne le texte. -->
+    <div class="services-hero__mobile-follow lg:hidden px-6 sm:px-10">
+        <div class="services-hero__mobile-summary">
+            <p class="services-hero__description text-[#001D51] text-[15px] leading-relaxed font-normal font-['Inter']">
+                Nous concevons des solutions numériques sur mesure pour accompagner la croissance de votre entreprise,
+                en alliant innovation technologique et savoir-faire africain.
+            </p>
+            <div class="services-hero__mobile-medallion" aria-hidden="true">
+                <img src="hero-nos-services-art-clean.png" alt="" loading="eager" fetchpriority="high" />
+            </div>
+        </div>
+        <a routerLink="/services" fragment="nos-offres"
+            class="cta-primary services-hero__mobile-cta inline-flex min-h-12 items-center justify-center gap-3 px-7 py-3.5 rounded-full bg-[#FAAB03] hover:bg-[#E59B02] text-white font-semibold text-sm shadow-lg shadow-[#FAAB03]/25 active:translate-y-0 transition-all duration-300 group cursor-pointer">
+            <span>Découvrir nos services</span>
+            <span class="text-base leading-none transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+        </a>
     </div>
 </section>
 

@@ -3,3 +3,122 @@
   display: block;
   width: 100%;
 }
+
+/* Hero mobile : même composition éditoriale que Nos services. */
+.apropos-hero {
+  display: block;
+  isolation: isolate;
+  min-height: auto !important;
+}
+
+.apropos-hero__mobile-background {
+  display: none;
+}
+
+.apropos-hero__content {
+  padding-bottom: 1.5rem;
+}
+
+.apropos-hero__title {
+  font-size: clamp(2rem, 9.2vw, 2.75rem);
+}
+
+.apropos-hero__content::before,
+.apropos-hero__content::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 5.25rem;
+  height: 14rem;
+  top: 7.2rem;
+  opacity: .16;
+  pointer-events: none;
+  background-image: linear-gradient(45deg, transparent 43%, #faab03 44% 56%, transparent 57%),
+    linear-gradient(-45deg, transparent 43%, #faab03 44% 56%, transparent 57%);
+  background-size: 2.2rem 2.2rem;
+}
+
+.apropos-hero__content::before {
+  left: -4.1rem;
+}
+
+.apropos-hero__content::after {
+  right: -4.1rem;
+}
+
+.apropos-hero__mobile-follow {
+  position: relative;
+  z-index: 1;
+  margin-top: -1.15rem;
+  padding-bottom: 2.75rem;
+}
+
+.apropos-hero__mobile-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 9.25rem;
+  align-items: end;
+  gap: .75rem;
+  margin-bottom: 1.5rem;
+}
+
+.apropos-hero__mobile-medallion {
+  width: 9.25rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: .4rem solid #fff9ef;
+  border-radius: 48% 52% 50% 46%;
+  box-shadow: 0 1rem 2rem rgba(0, 29, 81, .18);
+}
+
+.apropos-hero__mobile-medallion img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% 100%;
+  transform: scale(2.15);
+  transform-origin: 72% 100%;
+  filter: saturate(1.12) contrast(1.12) brightness(.96);
+}
+
+.apropos-hero__mobile-cta {
+  min-width: min(100%, 17.5rem);
+}
+
+@media (min-width: 640px) {
+  .apropos-hero__title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .apropos-hero {
+    display: flex;
+    min-height: calc(100vh - 6rem) !important;
+  }
+
+  .apropos-hero__content {
+    padding-bottom: 4rem;
+  }
+
+  .apropos-hero__title {
+    font-size: 3.25rem;
+  }
+
+  .apropos-hero__content::before,
+  .apropos-hero__content::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .apropos-hero__title {
+    font-size: 3.625rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .apropos-hero__title {
+    font-size: 3.875rem;
+  }
+}

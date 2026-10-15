@@ -1,36 +1,60 @@
-﻿<!-- HERO AFRI-CODE (Reproduction fidèle avec image d'arrière-plan arrière-planhero-home.png) -->
+<!-- HERO AFRI-CODE (Reproduction fidèle de la maquette officielle mobile et desktop) -->
 <section
-  class="hero-section relative w-full overflow-hidden bg-[#FFF9F0] flex items-center min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]">
+  class="hero-section relative w-full overflow-hidden bg-[#FFF9EF] flex items-center min-h-[calc(100vh-5rem)] lg:min-h-[calc(100vh-6rem)]">
 
-  <!-- IMAGE D'ARRIÈRE-PLAN DU HERO -->
+  <!-- IMAGES D'ARRIÈRE-PLAN ADAPTÉES MOBILE / DESKTOP -->
   <div class="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
-    <img src="arrière-planhero-home.png" alt="Arrière-plan hero Afri-code"
-      class="w-full h-full object-cover object-center lg:object-right" loading="eager" fetchpriority="high" />
+    <!-- Version mobile (< lg) : photographie de la calebasse cadrée en bas, fond ivoire pur en haut -->
+    <img src="hero-home-mobile-clean.png" alt="Afri-code - Accueil chaleureux avec la calebasse d'eau"
+      class="w-full h-full object-cover object-bottom lg:hidden" loading="eager" fetchpriority="high" />
+
+    <!-- Version desktop (>= lg) : composition panoramique avec la calebasse à droite et ombres douces -->
+    <img src="arrière-planhero-home.png" alt="Afri-code - Accueil chaleureux avec la calebasse d'eau"
+      class="hidden lg:block w-full h-full object-cover object-right" loading="eager" fetchpriority="high" />
+  </div>
+
+  <!-- MOTIFS DÉCORATIFS LATÉRAUX (Chevrons et losanges orange pâle conformes à la maquette) -->
+  <!-- 1. Chevrons géométriques bord droit -->
+  <div
+    class="absolute right-0 top-32 sm:top-36 w-16 xs:w-20 sm:w-24 pointer-events-none select-none z-[1] overflow-hidden opacity-90"
+    aria-hidden="true">
+    <svg viewBox="0 0 100 380" fill="none" stroke="#FFD9B0" stroke-width="13" stroke-linecap="square"
+      class="w-full h-auto">
+      <path d="M110,20 L32,98 L110,176" />
+      <path d="M110,75 L48,137 L110,199" />
+      <path d="M110,145 L32,223 L110,301" />
+      <path d="M110,200 L48,262 L110,324" />
+      <rect x="8" y="105" width="14" height="14" transform="rotate(45 15 112)" fill="#FFD9B0" stroke="none" />
+      <rect x="18" y="150" width="12" height="12" transform="rotate(45 24 156)" fill="#FFD9B0" stroke="none" />
+      <rect x="8" y="230" width="14" height="14" transform="rotate(45 15 237)" fill="#FFD9B0" stroke="none" />
+    </svg>
+  </div>
+
+  <!-- 2. Chevrons et losanges bord bas-gauche -->
+  <div
+    class="absolute left-0 bottom-4 sm:bottom-10 w-18 xs:w-22 sm:w-28 pointer-events-none select-none z-[1] overflow-hidden opacity-90"
+    aria-hidden="true">
+    <svg viewBox="0 0 110 320" fill="none" stroke="#FFD9B0" stroke-width="13" stroke-linecap="square"
+      class="w-full h-auto">
+      <path d="M-10,35 L68,113 L-10,191" />
+      <path d="M-10,95 L48,153 L-10,211" />
+      <path d="M-10,165 L68,243 L-10,321" />
+      <rect x="82" y="125" width="14" height="14" transform="rotate(45 89 132)" fill="#FFD9B0" stroke="none" />
+      <rect x="70" y="170" width="12" height="12" transform="rotate(45 76 176)" fill="#FFD9B0" stroke="none" />
+    </svg>
   </div>
 
   <!-- CONTENEUR PRINCIPAL DU HERO (Aligné avec la navigation) -->
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+  <div
+    class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-8 pt-28 xs:pt-32 sm:pt-24 md:pt-16 pb-[280px] xs:pb-[310px] sm:pb-[380px] lg:py-14 xl:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
-      <!-- COLONNE GAUCHE : Contenu textuel, Boutons & Valeurs -->
+      <!-- COLONNE GAUCHE : Titre officiel, Accent graphique, Paragraphe, Actions -->
       <div class="lg:col-span-7 xl:col-span-6 flex flex-col justify-center">
 
-        <!-- C. Surtitre avec badge dynamique flottant -->
-        <div class="eyebrow flex items-center mb-3 sm:mb-4 select-none badge-float font-['Plus_Jakarta_Sans']">
-          <div
-            class="inline-flex items-center gap-2 sm:gap-2.5 px-3 py-1 sm:py-1.5 rounded-full bg-[#FFF0DE] border border-[#FFDAB3] shadow-xs text-xs sm:text-[13px] font-bold tracking-[0.2em] text-[#292F36] uppercase">
-            <span class="w-2 h-2 rounded-full bg-[#FF8200] pulse-solar shrink-0"></span>
-            <span>INNOVATION</span>
-            <span class="text-[#FF8200] font-black text-sm select-none">&bull;</span>
-            <span>AFRIQUE</span>
-            <span class="text-[#FF8200] font-black text-sm select-none">&bull;</span>
-            <span>IMPACT</span>
-          </div>
-        </div>
-
-        <!-- D. Titre principal avec la phrase d'accroche et mot dynamique -->
+        <!-- TITRE PRINCIPAL H1 AVEC MOT DYNAMIQUE ALTERNATIF -->
         <h1
-          class="hero-title text-[#292F36] text-[34px] sm:text-[42px] md:text-[46px] lg:text-[48px] xl:text-[52px] font-extrabold tracking-[-0.025em] leading-[1.12] mb-4 sm:mb-5 font-['Plus_Jakarta_Sans']">
+          class="hero-title text-[#102638] text-[29px] xs:text-[33px] sm:text-[42px] md:text-[46px] lg:text-[50px] xl:text-[54px] font-extrabold tracking-[-0.025em] leading-[1.14] sm:leading-[1.12] mb-4 sm:mb-5 font-['Plus_Jakarta_Sans']">
           Donnez à votre activité<br />
           l'image
           <span class="text-shimmer dynamic-word font-black ml-1.5 inline-block" [class.word-in]="wordState() === 'in'"
@@ -38,46 +62,39 @@
           qu'elle mérite.
         </h1>
 
-        <!-- E. Petit séparateur avec dégradé solaire -->
-        <div
-          class="w-16 h-[3px] bg-gradient-to-r from-[#FF8200] via-[#FFA43A] to-[#FFD08A] rounded-full mb-4 sm:mb-5 shadow-xs"
-          aria-hidden="true"></div>
+        <!-- 3. ACCENT GRAPHIQUE (Trait horizontal orange épais et arrondi) -->
+        <div class="w-16 h-[3.5px] bg-[#FF7900] rounded-full mb-4 sm:mb-5 shadow-xs" aria-hidden="true"></div>
 
-        <!-- F. Texte descriptif (4 lignes fluides) -->
+        <!-- 4. PARAGRAPHE DESCRIPTIF (Texte exact mot pour mot) -->
         <p
-          class="hero-description text-[#555B63] text-sm sm:text-[15px] leading-relaxed max-w-[450px] mb-6 sm:mb-8 font-normal font-['Inter']">
+          class="hero-description text-[#102638]/85 text-[13.5px] xs:text-sm sm:text-[15px] leading-relaxed max-w-[480px] mb-5 sm:mb-8 font-normal font-['Inter']">
           Afri-code conçoit et développe des solutions digitales pour accompagner les entreprises, les communautés et
           les talents africains vers un avenir plus connecté et plus inclusif.
         </p>
 
-        <!-- G. Boutons d'action magnétiques -->
-        <div class="flex flex-wrap items-center gap-5 sm:gap-7 mb-8 sm:mb-10">
-          <!-- Bouton principal : Capsule orange avec micro-interaction -->
+        <!-- 5. BOUTONS D'ACTION (Alignés sur la même rangée horizontale) -->
+        <div class="flex items-center gap-3.5 sm:gap-6 mb-6 sm:mb-9">
+          <!-- Bouton principal : Capsule orange pleine -->
           <a routerLink="/services"
-            class="cta-primary btn-magnetic inline-flex items-center justify-center gap-3 px-7 py-3 sm:py-3.5 rounded-full bg-[#FF8200] hover:bg-[#E67500] text-white font-semibold text-sm sm:text-[15px] shadow-sm hover:shadow-md transition-all group cursor-pointer">
+            class="cta-primary inline-flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#FF7900] hover:bg-[#E66D00] text-white font-semibold text-xs xs:text-sm sm:text-[15px] shadow-sm hover:shadow-md transition-all active:scale-98 group cursor-pointer shrink-0">
             <span>Découvrir nos solutions</span>
-            <svg class="w-4 h-4 text-white transform group-hover:translate-x-1.5 transition-transform" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            <span
+              class="text-base sm:text-lg leading-none transform group-hover:translate-x-1 transition-transform">→</span>
           </a>
 
-          <!-- Bouton secondaire : Transparent avec flèche -->
+          <!-- Action secondaire : Texte bleu nuit sans fond avec flèche -->
           <a routerLink="/a-propos"
-            class="cta-secondary inline-flex items-center gap-2 text-[#292F36] hover:text-[#FF8200] font-semibold text-sm sm:text-[15px] transition-all group cursor-pointer py-1.5 hover:translate-x-1">
+            class="cta-secondary inline-flex items-center gap-1.5 sm:gap-2 text-[#102638] hover:text-[#FF7900] font-semibold text-xs xs:text-sm sm:text-[15px] transition-all group cursor-pointer py-1.5 hover:translate-x-1 shrink-0">
             <span>En savoir plus</span>
-            <svg
-              class="w-4 h-4 text-[#292F36] group-hover:text-[#FF8200] transform group-hover:translate-x-1.5 transition-all"
-              fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            <span
+              class="text-base sm:text-lg leading-none transform group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
 
       </div>
 
-      <!-- COLONNE DROITE : Espace réservé pour la composition calebasse de l'arrière-plan -->
-      <div class="hidden lg:block lg:col-span-6 xl:col-span-6 pointer-events-none" aria-hidden="true"></div>
+      <!-- COLONNE DROITE : Espace réservé pour la composition calebasse (Desktop) -->
+      <div class="hidden lg:block lg:col-span-5 xl:col-span-6 pointer-events-none" aria-hidden="true"></div>
 
     </div>
   </div>
