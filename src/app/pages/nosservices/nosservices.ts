@@ -86,8 +86,8 @@ export class Nosservices {
       top: '38.0%',
       width: '16.5%',
       height: '17.0%',
-      mobileBg: 'from-[#FF8C00] to-[#E65100]',
-      mobileBorder: 'border-[#FFB74D]/40',
+      mobileBg: 'from-[#FF7900] to-[#E66D00]',
+      mobileBorder: 'border-[#FF7900]/40',
     },
     {
       id: 'design-uiux',

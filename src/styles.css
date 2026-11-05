@@ -6,23 +6,23 @@
   /* Couleurs Principales Afri-code : Blanc, Ivoire & Orange Vif */
   --color-afri-white: #FFFFFF;
   --color-afri-ivory: #FFF9F0;
-  --color-afri-orange: #FF8200;
-  --color-afri-orange-light: #FFB45B;
-  --color-afri-orange-hover: #E67500;
+  --color-afri-orange: #FF7900;
+  --color-afri-orange-light: #FF7900;
+  --color-afri-orange-hover: #E66D00;
   --color-afri-anthracite: #292F36;
   --color-afri-text-muted: #555B63;
 
-  --color-afri-yellow: #FAAB03;
-  --color-afri-yellow-light: #FFBC2E;
-  --color-afri-yellow-hover: #E59B02;
-  --color-afri-yellow-dark: #BF8201;
+  --color-afri-yellow: #FF7900;
+  --color-afri-yellow-light: #FF7900;
+  --color-afri-yellow-hover: #E66D00;
+  --color-afri-yellow-dark: #E66D00;
   --color-afri-yellow-subtle: #FFF8E7;
 
   /* Alias Doré (Gold) pour rétrocompatibilité */
-  --color-afri-gold: #FAAB03;
-  --color-afri-gold-hover: #E59B02;
-  --color-afri-gold-dark: #BF8201;
-  --color-afri-gold-light: #FFBC2E;
+  --color-afri-gold: #FF7900;
+  --color-afri-gold-hover: #E66D00;
+  --color-afri-gold-dark: #E66D00;
+  --color-afri-gold-light: #FF7900;
   --color-afri-gold-subtle: #FFF8E7;
 
   /* Couleurs Secondaires de Contraste & Structure (Bleu Nuit) */
@@ -65,13 +65,12 @@ body {
 
 .text-gradient-yellow,
 .text-gradient-gold {
-  background: linear-gradient(90deg, #FAAB03 0%, #FFC857 100%);
+  background: linear-gradient(90deg, #FF7900 0%, #FF7900 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glow-yellow,
 .glow-gold {
-  box-shadow: 0 0 25px rgba(250, 171, 3, 0.3);
+  box-shadow: 0 0 25px rgba(255, 121, 0, 0.3);
 }
-

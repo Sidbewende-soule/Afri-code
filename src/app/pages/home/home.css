@@ -33,10 +33,10 @@
 /* Pulsation solaire discrète */
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 130, 0, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 121, 0, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(255, 130, 0, 0);
+    box-shadow: 0 0 0 8px rgba(255, 121, 0, 0);
   }
 }
 
@@ -46,7 +46,7 @@
 
 /* Texte vibrant avec éclat doré/orange animé */
 .text-shimmer {
-  background: linear-gradient(90deg, #FF8200 0%, #FFB347 25%, #FF8200 50%, #FF9A1F 75%, #FF8200 100%);
+  background: linear-gradient(90deg, #FF7900 0%, #FF7900 100%);
   background-size: 250% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -118,8 +118,8 @@
 
 .interactive-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px -8px rgba(255, 130, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.04);
-  border-color: rgba(255, 130, 0, 0.45);
+  box-shadow: 0 16px 36px -8px rgba(255, 121, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-color: rgba(255, 121, 0, 0.45);
 }
 
 /* Trait orange s'élargissant au survol */
@@ -129,7 +129,7 @@
 
 .group:hover .expand-line {
   width: 2.5rem;
-  background-color: #FF8200;
+  background-color: #FF7900;
 }
 
 /* Icône ronde avec réaction douce au survol */
@@ -139,7 +139,7 @@
 
 .group:hover .icon-badge {
   transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 6px 18px rgba(255, 130, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(255, 121, 0, 0.25);
 }
 
 /* Boutons avec légère impulsion tactile */
@@ -149,7 +149,7 @@
 
 .btn-magnetic:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px -4px rgba(255, 130, 0, 0.35);
+  box-shadow: 0 10px 24px -4px rgba(255, 121, 0, 0.35);
 }
 
 .btn-magnetic:active {

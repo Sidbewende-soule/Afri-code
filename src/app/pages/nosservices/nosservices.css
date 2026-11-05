@@ -31,8 +31,8 @@
   top: 7.2rem;
   opacity: .16;
   pointer-events: none;
-  background-image: linear-gradient(45deg, transparent 43%, #faab03 44% 56%, transparent 57%),
-    linear-gradient(-45deg, transparent 43%, #faab03 44% 56%, transparent 57%);
+  background-image: linear-gradient(45deg, transparent 43%, #ff7900 44% 56%, transparent 57%),
+    linear-gradient(-45deg, transparent 43%, #ff7900 44% 56%, transparent 57%);
   background-size: 2.2rem 2.2rem;
 }
 
