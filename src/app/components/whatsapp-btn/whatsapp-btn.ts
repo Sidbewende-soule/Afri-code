@@ -14,6 +14,6 @@ export class WhatsappBtn {
   readonly fullWidth = input<boolean>(false);
 
   protected readonly whatsappUrl = computed(() => {
-    return `https://wa.me/${this.phoneNumber()}?text=${encodeURIComponent(this.message())}`;
+    return 'https://wa.me/qr/Q77K6UQDJRA7D1';
   });
 }
